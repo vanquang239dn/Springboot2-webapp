@@ -34,3 +34,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
+
+wrapper {
+    gradleVersion = '6.2.2'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
