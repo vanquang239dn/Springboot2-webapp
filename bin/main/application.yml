@@ -1,0 +1,14 @@
+# 共通の設定を定義する
+spring:
+    profiles:
+        # デフォルトを明示的に指定する
+        # 開発環境以外は環境変数でプロファイルを切り替える
+        default: development
+        active: development
+    datasource:
+        platform: mysql
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/mysql?useSSL=false&characterEncoding=UTF-8
+        username: root
+        password: password
+        autoCommit: false
